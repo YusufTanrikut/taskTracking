@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="task-header-buttons">
+        <button class="back-button" (click)="back()">Geri Dön</button>
+        <button class="edit-button" (click)="editTask()">Düzenle</button>
+    </div>
+    <div class="task-header">
+        {{task.title}}
+    </div>
+    <div class="task-content">
+        <p>{{task.description}}</p>
+    </div>
+    <div class="comments">
+        <h1>Yorumlar</h1>
+        <div class="comments-form">
+            <input type="text" [placeholder]="user.name" [(ngModel)]="commentForm.userName">
+            <textarea cols="30" rows="10" 
+                placeholder="Yorumunuz" [(ngModel)]="commentForm.comment"></textarea>
+            <button (click)="addComment()">Gönder</button>
+        </div>
+        <div class="comments-item" *ngFor="let comment of comments">
+            <h2>{{comment.userName}}</h2>
+            <p>{{comment.comment}}</p>
+        </div>
+    </div>
+</div>

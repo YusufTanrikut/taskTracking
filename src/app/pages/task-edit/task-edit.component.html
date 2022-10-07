@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="task-edit-header">
+        Aktivite {{ isNew ? 'Ekle' : 'Düzenle' }}
+    </div>
+    <div class="task-edit-content">
+        <select [(ngModel)]="taskRequest.assignedUserId">
+            <option [value]="user.id" *ngFor="let user of users">{{user.name}}</option>
+          </select>
+        <input type="text" 
+            placeholder="Başlık" 
+            [(ngModel)]="taskRequest.title">
+        <textarea cols="30" rows="8" 
+            placeholder="Açıklama" 
+            [(ngModel)]="taskRequest.description"></textarea>
+        <button (click)="isNew ? addTask() : updateTask()">Kaydet</button>
+        <button (click)="deleteTask()" class="delete" *ngIf="!isNew">
+            Sil
+        </button>
+        <button (click)="back()" class="delete" *ngIf="isNew">İptal</button>
+    </div>
+</div>

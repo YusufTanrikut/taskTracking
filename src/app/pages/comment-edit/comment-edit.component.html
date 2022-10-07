@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="comment-edit-header">
+        Yorum Düzenle
+    </div>
+    <div class="comment-edit-content">
+        <input type="text" 
+            placeholder="Yorumu Yapan" 
+            [(ngModel)]="commentRequest.userName">
+        <textarea cols="30" rows="10" 
+            placeholder="Yorum" 
+            [(ngModel)]="commentRequest.comment"></textarea>
+        <div class="comment-edit-buttons">
+            <button (click)="goTask()">Aktiviteye Git</button>
+            <button (click)="updateComment()">Kaydet</button>
+        </div>        
+    </div>
+</div>
