@@ -23,6 +23,10 @@ export class restApiService {
   getUsers() {
     return this.http.get<apiResponseModel>(this.apiURL + '/users/list');
   }
+
+  addUser(model: any) {
+    return this.http.post<apiResponseModel>(this.apiURL + '/users/create', JSON.stringify(model), this.httpOptions);
+  }
  
   // Error handling
   handleError(error: any) {

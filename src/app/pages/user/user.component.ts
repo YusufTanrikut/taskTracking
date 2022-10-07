@@ -1,16 +1,16 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import { LoginRequest } from "src/app/models/login-request.model";
+import { userRequest } from "src/app/models/user-request.model";
 import { UserModel } from "src/app/models/user.model";
 import { UserService } from "src/app/services/user.service";
 
 @Component({
-    selector: 'login',
-    templateUrl: './login.component.html'
+    selector: 'user',
+    templateUrl: './user.component.html'
 })
 
-export class LoginComponent implements OnInit {
-    loginRequest: LoginRequest = {
+export class userComponent implements OnInit {
+    userRequest: userRequest = {
         name: '',
         surname: '',
         title: '',
@@ -27,15 +27,15 @@ export class LoginComponent implements OnInit {
     
     ngOnInit(): void {}
 
-    login(): void {
+    create(): void {
         const user: UserModel = {
             id: 0,
             surname: "",
-            name: this.loginRequest.name,
+            name: this.userRequest.name,
             title: ""
         };
 
-        this.userService.loginUser(user);
+        this.userService.addUser(user);
 
         this.router.navigate(['tabs']);
     }

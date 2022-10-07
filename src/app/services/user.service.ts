@@ -36,15 +36,15 @@ export class UserService {
     }
 
     public addUser(user: UserModel): void {
-        const users = this.getUsers();
-        
-        user.id = users.length + 1;
-        users.push(user);
-
-        this.setUsers(users);
+        debugger
+        this._restApiService.addUser(user)
+            .subscribe(data => {
+                if(data.success == true){
+                }
+            });
     }
 
-    public loginUser(user: UserModel): void {
+    public userUser(user: UserModel): void {
         this.addUser(user);
         this.setUser(user);
     }
