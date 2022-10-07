@@ -68,4 +68,8 @@ export class TabsComponent implements OnInit {
     addTask() {
         this.router.navigate(['/task/edit', 0]);
     }
+
+    addUser() {
+        this.router.navigate(['/addUser']);
+    }
 }

@@ -11,7 +11,9 @@ import { UserService } from "src/app/services/user.service";
 
 export class LoginComponent implements OnInit {
     loginRequest: LoginRequest = {
-        name: ''
+        name: '',
+        surname: '',
+        title: '',
     };
 
     isError = false;

@@ -1,11 +1,14 @@
 <div class="login-form">
     <div class="container">
         <div class="login-form-header">
-            Kullanıcı Girişi
+            Add user
         </div>
         <div class="login-form-content">
-            <input type="text" placeholder="Ad Soyad" [(ngModel)]="loginRequest.name">
-            <button (click)="login()">Kaydet</button>
+            <input type="text" placeholder="Name" [(ngModel)]="loginRequest.name">
+            <input type="text" placeholder="Surname" [(ngModel)]="loginRequest.surname">
+            <input type="text" placeholder="Title" [(ngModel)]="loginRequest.title">
+
+            <button (click)="login()">Save</button>
         </div>
     </div>
 </div>

@@ -7,7 +7,8 @@ import { TaskEditComponent } from './pages/task-edit/task-edit.component';
 import { TaskComponent } from './pages/task/task.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', component: TabsComponent },
+  { path: 'addUser', component: LoginComponent },
   { path: 'tabs', component: TabsComponent },
   { path: 'task/:id', component: TaskComponent },
   { path: 'task/edit/:id', component: TaskEditComponent },

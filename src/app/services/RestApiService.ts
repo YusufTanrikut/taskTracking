@@ -6,7 +6,7 @@ import { apiResponseModel } from '../models/apiResponse.model';
 @Injectable({
   providedIn: 'root',
 })
-export class RestApiService {
+export class restApiService {
   // Define API
   apiURL = 'http://localhost:64773/api';
   constructor(private http: HttpClient) {}

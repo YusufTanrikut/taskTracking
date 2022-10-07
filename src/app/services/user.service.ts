@@ -1,11 +1,11 @@
 import { NgModule } from "@angular/core";
 import { UserModel } from "../models/user.model";
-import { RestApiService } from "./RestApiService";
+import { restApiService } from "./restApiService";
 
 @NgModule({})
 
 export class UserService {
-    constructor(private _restApiService: RestApiService) {}
+    constructor(private _restApiService: restApiService) {}
 
     public getUsers(): UserModel[] {
         let result: UserModel[] = [];
